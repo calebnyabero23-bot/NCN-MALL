@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NCN FOR ALL (caleb nyabero shopping mall)- Marketplace</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>NCN FOR ALL (NYABERO SHOPPING MALL)</h1>
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
+  <button id="loginBtn" onclick="showLogin()">Login</button>
+  <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+  <span id="welcomeUser" style="display:none;"></span>
+  <span id="cartCount">Cart (0)</span>
+</header>
+
+<nav id="adminPanel" style="display:none;">
+  <h2>Admin Panel</h2>
+  <input type="text" id="adminProductName" placeholder="Product Name" />
+  <input type="number" id="adminProductPrice" placeholder="Price" />
+  <button onclick="addProduct()">Add Product</button>
+  <div id="adminProductsList"></div>
+</nav>
+
+<section id="loginSection" style="display:none;">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button id="loginBtnSection" onclick="login()">Login</button>
+  <p id="loginMessage" style="color:red;"></p>
+</section>
+
+<main>
+  <h2>Products</h2>
+  <div id="products"></div>
+
+  <h2>Your Cart</h2>
+  <div id="cart"></div>
+  <p id="total"></p>
+  <button onclick="checkout()">Checkout</button>
+
+  <h2>Order History</h2>
+  <div id="orderHistory"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html> 
